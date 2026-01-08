@@ -1,0 +1,3 @@
+SECRET_KEY=super-secret-key
+JWT_SECRET_KEY=jwt-super-secret
+DATABASE_URL=postgresql://postgres:@localhost:5432/restaurant
