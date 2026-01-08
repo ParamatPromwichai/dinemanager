@@ -23,7 +23,9 @@ load_dotenv()
 # App setup
 # =====================
 app = Flask(__name__)
-CORS(app, supports_credentials=True)
+# CORS(app, supports_credentials=True)
+# เปลี่ยนจากบรรทัดเดิม เป็นอันนี้ครับ
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 app.config["JWT_SECRET_KEY"] = os.getenv("JWT_SECRET_KEY")
